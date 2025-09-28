@@ -5,6 +5,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Providers from "./providers";
 
 import "./globals.css";
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,10 +36,8 @@ export default function RootLayout({
       <html lang='en'>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-          <Providers>
-            <Navbar />
-            {children}
-          </Providers>
+          <Providers>{children}</Providers>
+          <Toaster />
         </body>
       </html>
     </ConvexAuthNextjsServerProvider>
