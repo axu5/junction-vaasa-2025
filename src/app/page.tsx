@@ -14,8 +14,6 @@ import {
 export default function Page() {
   const role = useQuery(api.functions.user.getUserRole);
 
-  console.log(role);
-
   return (
     <>
       <Unauthenticated>

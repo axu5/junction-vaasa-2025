@@ -9,8 +9,9 @@ export const { auth, signIn, signOut, store, isAuthenticated } =
         const users = await db.query("users").collect();
         const isFirstUser = users.length === 1;
         const role = isFirstUser ? "admin" : "operator";
+
         await db.insert("roles", {
-          userId: userId.toString(),
+          userId,
           role: role,
         });
       },
