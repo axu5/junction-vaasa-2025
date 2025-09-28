@@ -28,7 +28,7 @@ However, this can be changed in the environment variables file to integrate with
 1. Make a copy of `.env.example` and fill the values in the file according to the comments.
 
 ```
-cp .env.example ./web/.env
+cp example.env .env
 ```
 
 2. Install dependencies
